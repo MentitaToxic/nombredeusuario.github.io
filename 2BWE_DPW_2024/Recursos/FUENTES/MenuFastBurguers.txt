@@ -1,0 +1,22 @@
+¡Bienvenidos a FastBurguers! En nuestro restaurante, nos especializamos en ofrecer hamburguesas irresistibles, preparadas con ingredientes frescos y de alta calidad para brindarles la mejor experiencia culinaria. A continuación, les presentamos nuestra deliciosa carta:
+
+---
+
+1. Hamburguesa Clásica FastBurguers  
+Una jugosa carne 100% vacuna, acompañada de lechuga fresca, tomate, cebolla y nuestra salsa especial FastBurguers. Todo esto servido en un suave pan de hamburguesa.  
+Precio: $320
+
+
+
+2. Hamburguesa 
+Para los amantes del sabor ahumado, esta hamburguesa combina carne 100% vacuna con bacon crujiente, cebolla caramelizada, lechuga, tomate y una deliciosa salsa barbacoa.  
+Precio: $380
+
+3. Hamburguesa   
+Una opción picante con carne 100% vacuna, guacamole, jalapeños, cebolla morada y una mezcla de salsas mexicanas que te harán sentir como en el corazón de México.  
+Precio: $350
+
+4. Hamburguesa Veggie Deluxe  
+Para quienes prefieren opciones vegetales, ofrecemos nuestra hamburguesa vegetariana con una jugosa base de quinoa y vegetales, acompañada de lechuga, tomate, cebolla y mayonesa vegana.  
+Precio: $300
+

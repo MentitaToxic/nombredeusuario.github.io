@@ -1,0 +1,225 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento (HTML5) -->
+<html lang="es"> <!-- Inicia el documento HTML y define el idioma como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres para que se muestren correctamente los caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el diseño sea responsivo en dispositivos móviles -->
+    <title>FastBurguers</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Enlace al archivo de estilo CSS -->
+    <link rel="icon" href="./IMG/logo1.png"> <!-- Define el ícono de la página en la pestaña del navegador -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconecta con Google Fonts para mejorar el rendimiento de carga -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconecta con los servidores de Google Fonts con acceso cruzado -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Roboto desde Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" crossorigin="anonymous"> <!-- Enlace a Font Awesome para usar íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+
+
+<body>
+
+    <!-- Contenedor principal del menú de navegación -->
+    <nav class="main-nav">
+        <div class="nav1"></div>
+        <div class="nav2">
+            <i class="fa fa-desktop"></i>
+            <i class="fa fa-tablet-alt"></i>
+            <i class="fa fa-mobile-alt"></i>
+        </div>
+        <div class="nav3">
+            <ul>
+                <img src="./IMG/logo1.png" alt="FastBurguers Logo" class="logo">
+
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#funciones">Funciones</a></li>
+                <li><a href="#descargas">Descargas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- Sección de inicio -->
+    <section id="inicio">
+        <h1>Bienvenido a FastBurguers!</h1>
+        <p>"La mejor hamburguesa, al instante."</p>
+
+        
+
+        <!-- Video de fondo que se reproduce automáticamente, está en silencio y se repite en bucle -->
+        <div class="video-container"> <!-- Añadí un contenedor para el video -->
+            <video autoplay muted loop class="videoFondo">
+                <source src="./VIDEOS/videof.mp4" type="video/mp4">
+            </video>
+        </div>    
+    
+
+
+        <!-- Contenedor principal para el contenido que se superpone sobre el video de fondo -->
+        <div id="CONTENIDO_INICIO">
+            <div id="CONTENIDO_SUP">
+            </div>
+            <div id="CONTENIDO_INF">
+                <div class="DIVISIONES_CONTENIDO">
+                    <h3><i class="fas fa-hamburger fa-sm"></i></h3>
+                    <p>La preparacion mas
+                        rapida de montevideo.</p>
+                </div>
+                <div class="DIVISIONES_CONTENIDO">
+                    <h3><i class="fas fa-utensils fa-sm"></i></h3>
+                    <p>Platillos exquisitos.</p>
+            </div>
+            <div class="DIVISIONES_CONTENIDO">
+                <h3><i class="fa-solid fa-user-tie"></i></h3>
+                <p>Aetencion al cliente perfecta.</p>
+            </div>
+            <div class="DIVISIONES_CONTENIDO">
+                <h3><i class="fa-solid fa-face-laugh-wink"></i></h3>
+                <p>Y lo mas importante, estomagos felices!</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Galería de fotos de las hamburguesas -->
+    <div class="galeria">
+        <img src="./IMG/bigmac.png" alt="Hamburguesa deliciosa" class="foto">
+        <img src="./IMG/mcnifica.png" alt="Hamburguesa McNifica" class="foto">
+        <img src="./IMG/hamburguesa.png" alt="Hamburguesa clásica" class="foto">
+        <img src="./IMG/hamburguesasoloqueso.png" alt="Hamburguesa con queso" class="foto">
+    </div>
+
+<!-- Sección de descargas -->
+<section id="descargas">
+    <h2>Descargas</h2>
+    <p>Aquí podrás descargar información sobre nuestros servicios.</p>
+    <a href="./FUENTES/MenuFastBurguers.txt" download>Descargar Menú</a>
+</section>
+
+
+<!--Barra de busqueda-->
+<section class="busqueda">
+    <form action="#" method="get">
+        <div class="input-container">
+            <input type="text" id="search" name="search" placeholder="Buscar..." />
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i> <!-- Icono de búsqueda de Font Awesome -->
+            </button>
+        </div>
+    </form>
+</section>
+
+    <!-- Sección de funciones -->
+    <section id="funciones">
+        <div class="columna">
+            <h2><i class="fa-solid fa-motorcycle"></i></h2>
+            <p>Encarga tu comida por internet incluyendo delivery.</p>
+        </div>
+        <div class="columna">
+            <h2><i class="fa-regular fa-clipboard"></i></h2>
+            <p>Mira la carta en linea.</p>
+        </div>
+        <div class="columna">
+            <h2><i class="fa-solid fa-burger"></i></h2>
+            <p>Mira nuestras hamburguesas.</p>
+        </div>
+        <div class="columna">
+            <h2><i class="fa-solid fa-comments"></i></h2>
+            <p>Haz tu reserva desde la pagina.</p>
+        </div>
+    </section>
+
+    <div class="form-container">
+        
+        <form action="enviar_pedido" method="POST">
+            <!-- Nombre del cliente -->
+            <label for="nombre"></label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+
+            <!-- Email del cliente -->
+            <label for="email"></label>
+            <input type="email" id="email" name="email" required placeholder="Ingresa tu email">
+
+            <!-- Cantidad de personas -->
+            <label for="personas"></label>
+            <input type="number" id="personas" name="personas" required min="1" placeholder="Cantidad de personas">
+
+            <!-- Mensaje o pedido especial -->
+            <label for="mensaje"></label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu direccion o pedido especial "></textarea>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </div>
+
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <div class="columnas">
+            <div class="columna"></div>
+            <div class="columna">
+                <h3>Síguenos en nuestras redes sociales</h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com/FastBurguers" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/FastBurguers" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="columna">
+
+
+
+                
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.102750394392!2d-56.19466122492657!3d-34.9038708734107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f803283e1a937%3A0xbd22d67c08951733!2sMercedes%201131%2C%2011100%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1731571361568!5m2!1ses!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        
+        let prevScrollpos = window.pageYOffset;
+        const nav = document.querySelector('.main-nav');
+
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+
+            if (prevScrollpos > currentScrollPos) {
+                nav.style.top = "0";
+            } else {
+                nav.style.top = "-60px";  
+            }
+
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

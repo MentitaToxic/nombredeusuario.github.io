@@ -1,0 +1,685 @@
+/* Ocultar barras de desplazamiento */
+html, body {
+    overflow-x: hidden; /* Oculta las barras de desplazamiento horizontal */
+    margin: 0; /* Elimina el margen predeterminado */
+    width: 100%; /* Asegura que el contenido no exceda el ancho de la pantalla */
+    height: 100%; /* Permite que el contenido se expanda verticalmente */
+}
+
+/* Configuración general de la página */
+body {
+    font-family: 'Roboto', sans-serif; /* Define la fuente de la página */
+    background: linear-gradient(to bottom, #000000, #808080); /* Gradiente de fondo */
+    color: #fff; /* Color del texto blanco */
+    margin: 0; /* Elimina márgenes externos */
+    overflow-y: auto; /* Habilita el scroll vertical si es necesario */
+}
+
+/* Efecto de desplazamiento suave */
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave para el scroll */
+}
+
+/* Reducir el espacio entre las secciones */
+section {
+    margin-bottom: 20px; /* Reduce el espacio entre secciones */
+}
+
+/* Reducir el espacio dentro de las columnas */
+.columna {
+    margin-bottom: 10px; /* Espacio entre las columnas */
+}
+
+/* Reducir el espacio dentro de los contenedores */
+#funciones .columna, .DIVISIONES_CONTENIDO {
+    margin: 5px; /* Espacio entre los elementos dentro de las columnas */
+}
+
+/* Reducir el espacio entre el contenido y los bordes */
+#funciones, #inicio, #contacto, #descargas {
+    padding: 10px 0; /* Ajusta el padding para reducir espacio dentro de las secciones */
+}
+
+/* Espacio entre los títulos y los párrafos */
+h2, h3 {
+    margin-bottom: 5px; /* Reduce el espacio debajo de los títulos */
+}
+
+p {
+    margin-top: 0; /* Elimina espacio arriba del párrafo */
+    margin-bottom: 10px; /* Reduce el espacio debajo de los párrafos */
+}
+
+/* Reducir espacio en los formularios */
+input[type="text"], .search-button {
+    margin-bottom: 5px; /* Reduce el espacio entre los elementos del formulario */
+}
+
+/* Espacio entre las imágenes de la galería */
+.galeria img {
+    margin-bottom: 10px; /* Reduce el espacio entre las imágenes */
+}
+
+
+/* Configuración del contenedor principal del menú de navegación */
+.main-nav {
+    display: flex; /* Distribuye elementos en una fila */
+    justify-content: space-between; /* Espacio entre los ítems */
+    align-items: center; /* Alinea verticalmente en el centro */
+    width: 100vw; /* Ocupa el ancho de la ventana */
+    height: 15vh; /* Altura del menú de navegación */
+    background-color: #333; /* Fondo oscuro */
+}
+
+/* Estilos para los íconos de visualización en .nav2 */
+.nav2 i {
+    color: white; /* Color de los íconos */
+    font-size: 20px; /* Tamaño de fuente para íconos */
+    margin: 0 10px; /* Espaciado entre íconos */
+}
+
+/* Configuración de los enlaces del menú en nav3 */
+.nav3 ul {
+    list-style: none; /* Elimina viñetas de lista */
+    display: flex; /* Distribuye elementos en fila */
+    gap: 15px; /* Espacio entre elementos */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+.nav3 ul li a {
+    color: black; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: rgb(160, 151, 141); /* Color de fondo */
+    border-radius: 5px; /* Borde redondeado */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+/* Efecto hover en los enlaces del menú */
+.nav3 ul li a:hover {
+    background-color: beige; /* Cambia el fondo al pasar el cursor */
+}
+
+/* Configuración para el diseño de la galería */
+.galeria {
+    display: flex; /* Flexbox para organizar elementos */
+    justify-content: space-around; /* Espacio entre imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.foto {
+    width: 30%; /* Ancho de las fotos */
+    max-width: 200px; /* Ancho máximo */
+    margin: 10px; /* Margen alrededor de la foto */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Transición en el hover */
+}
+
+.foto:hover {
+    transform: scale(1.05); /* Escala la imagen al pasar el cursor */
+}
+
+/* Ajustes de la sección de inicio */
+#inicio {
+    display: flex; /* Flexbox para centrar el contenido */
+    flex-direction: column; /* Organiza elementos en columna */
+    align-items: center; /* Alineación centrada */
+    text-align: center; /* Texto centrado */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo translúcido */
+}
+
+/* Ajustes de la sección de funciones */
+#funciones {
+    display: flex; /* Flexbox para centrar elementos */
+    flex-direction: row; /* Elementos en fila */
+    justify-content: space-around; /* Espacio entre elementos */
+    align-items: center; /* Alinea verticalmente al centro */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Configuración para secciones generales */
+section {
+    width: 100vw; /* Ancho completo */
+    height: 100vh; /* Alto de la ventana */
+    display: flex; /* Flexbox para centrar contenido */
+    flex-direction: column; /* Columna para organizar */
+    align-items: center; /* Alineación centrada */
+    justify-content: center; /* Centrado vertical */
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column; /* Cambia a disposición en columna */
+        height: auto; /* Altura ajustable */
+    }
+
+    .nav3 ul {
+        flex-direction: column; /* Cambia disposición a columna */
+        align-items: center; /* Alineación centrada */
+    }
+
+    .galeria {
+        flex-direction: column; /* Cambia a disposición en columna */
+        align-items: center; /* Alineación centrada */
+    }
+}
+
+/* Estilos para el contenedor del menú */
+header nav ul {
+    padding: 0; /* Elimina padding */
+    list-style: none; /* Quita viñetas */
+    display: flex; /* Flexbox para organización en fila */
+    justify-content: space-around; /* Espacio entre ítems */
+    align-items: center; /* Alineación vertical */
+    margin: 0; /* Elimina el margen */
+}
+
+/* Estilos para los ítems de la lista */
+nav ul li {
+    margin: 0 10px; /* Espacio horizontal entre ítems */
+}
+
+/* Estilo para los enlaces del menú */
+nav ul li a {
+    padding: 10px 20px; /* Define el espaciado interno */
+    background-color: rgb(160, 151, 141); /* Fondo de enlaces */
+    color: black; /* Color del texto */
+    text-decoration: none; /* Quita subrayado */
+    font-size: 20px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Cambiar color de fondo al pasar el cursor */
+nav ul li a:hover {
+    background-color: beige; /* Cambia el fondo en hover */
+}
+
+/* Contenedor de las columnas de contacto */
+.columnas {
+    display: flex; /* Flexbox para organizar */
+    flex-wrap: wrap; /* Ajuste de columnas */
+    gap: 20px; /* Espacio entre columnas */
+    align-items: flex-start; /* Alineación inicial */
+}
+
+/* Columna de redes sociales */
+.contacto-columna-redes {
+    flex: 1; /* Ajusta la flexibilidad */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Dirección en columna */
+}
+
+/* Columna del mapa */
+.contacto-columna-mapa {
+    flex: 1; /* Ajuste de flexibilidad */
+    display: flex; /* Flexbox */
+    justify-content: flex-start; /* Alineación inicial */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* Asegura que el iframe (mapa) tenga un margen superior */
+.columnas iframe {
+    margin-top: 20px; /* Espacio superior */
+    width: 100%; /* Ancho completo */
+    height: 300px; /* Altura específica */
+    border: none; /* Sin borde */
+}
+
+/* Ajuste de tamaño de los íconos de redes sociales */
+.social-icons a i {
+    font-size: 2em; /* Tamaño de íconos */
+}
+
+.videoFondo {
+    position: fixed; /* Posición fija en la pantalla */
+    top: 0; /* Alinéa al borde superior */
+    left: 0; /* Alinéa al borde izquierdo */
+    width: 100vw; /* Ocupa el ancho de la pantalla */
+    height: 100vh; /* Ocupa el alto de la pantalla */
+    object-fit: cover; /* Asegura que el video cubra el fondo */
+    z-index: -1; /* Coloca el video detrás del contenido */
+    overflow: hidden; /* Evita desbordamiento */
+}
+
+#CONTENIDO_INICIO {
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Alinéa al borde superior */
+    left: 0; /* Alinéa al borde izquierdo */
+    width: 100vw; /* Ancho completo */
+    height: 100vh; /* Alto completo */
+    display: flex; /* Flexbox para centrar */
+    flex-direction: column; /* Dirección en columna */
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Alineación centrada */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Texto blanco */
+    z-index: 1; /* Coloca contenido sobre el video */
+}
+
+/* Configuración básica de la página */
+html, body {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+    width: 100vw; /* Establece el ancho de la ventana de visualización */
+    height: 100vh; /* Establece la altura de la ventana de visualización */
+    overflow-x: hidden; /* Oculta cualquier desplazamiento horizontal */
+}
+
+/* Configuración general del cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente de Google Fonts para el cuerpo */
+    background: linear-gradient(to bottom, #000000, #808080); /* Gradiente de fondo */
+    color: #fff; /* Color del texto en blanco */
+    overflow-y: auto; /* Permite desplazamiento solo en el eje vertical */
+}
+
+/* Contenedor principal del menú de navegación */
+.main-nav {
+    display: flex; /* Alinea los elementos horizontalmente */
+    justify-content: space-between; /* Distribuye el espacio entre elementos */
+    align-items: center; /* Alinea elementos en el centro verticalmente */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 15vh; /* Altura del menú */
+    background-color: #333; /* Color de fondo */
+    position: relative; /* Posición relativa */
+    z-index: 2; /* Hace que el menú esté encima del video */
+}
+
+/* Configuración del video de fondo */
+.videoFondo {
+    position: fixed; /* Fija el video en relación a la pantalla */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en el lado izquierdo */
+    width: 100%; /* Ancho completo de la pantalla */
+    height: 100%; /* Altura completa de la pantalla */
+    object-fit: cover; /* Ajusta el video para cubrir toda el área sin distorsionarse */
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+    overflow: hidden; /* Evita desbordamientos del video */
+}
+
+/* Contenedor principal que cubre el video de fondo */
+#CONTENIDO_INICIO {
+    position: relative; /* Posición relativa en relación al video */
+    z-index: 1; /* Mantiene el contenido encima del video */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    display: flex; /* Flexbox para alinear elementos */
+    flex-direction: column; /* Alinea elementos en columna */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Color del texto en blanco */
+}
+
+/* Sección de inicio */
+#inicio {
+    display: flex; /* Flexbox para alinear elementos */
+    flex-direction: column; /* Alinea elementos en columna */
+    align-items: center; /* Centra elementos horizontalmente */
+    justify-content: center; /* Centra elementos verticalmente */
+    width: 100vw; /* Ancho completo de la ventana de visualización */
+    min-height: 100vh; /* Altura mínima de la ventana de visualización */
+    overflow: hidden; /* Evita desplazamiento en la sección */
+}
+
+/* Opciones de contenido */
+.DIVISIONES_CONTENIDO {
+    margin: 1rem; /* Margen alrededor de cada opción */
+    text-align: center; /* Centra el texto */
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column; /* Alinea el menú en columna */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+    .nav3 ul {
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+    .galeria {
+        flex-direction: column; /* Alinea las imágenes de la galería en columna */
+        align-items: center; /* Centra las imágenes */
+    }
+}
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.nav3 ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+}
+
+.nav3 ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.nav3 ul li a:hover {
+    background-color: #555;
+}
+
+.funciones {
+    display: flex; /* Establece que los hijos de la sección sean flexibles */
+    justify-content: space-between; /* Espacio entre las columnas */
+    gap: 20px; /* Espacio entre cada columna */
+    flex-wrap: wrap; /* Permite que las columnas se acomoden si el espacio es pequeño */
+}
+
+.funcion {
+    flex: 1; /* Hace que cada columna ocupe el mismo espacio disponible */
+    background-color: #f4f4f4; /* Color de fondo de cada columna */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+@media (max-width: 768px) {
+    .funciones {
+        flex-direction: column; /* Para Flexbox */
+        grid-template-columns: 1fr; /* Para Grid, hace que todas las columnas se apilen */
+    }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilo general para la barra de búsqueda */
+.busqueda {
+    margin: 20px;
+    text-align: center;
+}
+
+.input-container {
+    display: flex; /* Para alinear el input y el icono horizontalmente */
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#search {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%; /* Ocupa la mayor parte del espacio */
+    border: 2px solid #ffffff;
+    border-radius: 25px; /* Bordes redondeados */
+    outline: none;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #000205; /* Color de fondo del botón */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 10px; /* Espacio entre el input y el botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-button i {
+    color: white; /* Color del icono */
+    font-size: 20px;
+}
+
+/* Efecto cuando el usuario pone el cursor sobre el botón */
+.search-button:hover {
+    background-color: #000000; /* Cambia el color cuando pasa el mouse por encima */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .input-container {
+        flex-direction: column; /* Cambia a una disposición vertical en pantallas pequeñas */
+    }
+
+    #search {
+        width: 100%; /* Hace que el input ocupe todo el ancho */
+        margin-bottom: 10px; /* Espacio entre el input y el botón */
+    }
+
+    .search-button {
+        width: 100%; /* Hace que el botón ocupe todo el ancho */
+    }
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-color: #333;
+    position: relative;
+}
+
+/* Estilo para el logo */
+.logo {
+    height: 50px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene la proporción del logo */
+    position: absolute; /* Lo coloca en una posición absoluta */
+    left: 20px; /* Ajusta la distancia desde el borde izquierdo */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    top: 50%; /* Lo centra verticalmente */
+    transform: translateY(-50%); /* Alinea perfectamente verticalmente */
+}
+
+.comentarios {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las cajas */
+    margin: 20px 0;
+}
+
+.comentario {
+    width: 150px; /* Ajusta el ancho según lo necesites */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.comentario:hover {
+    transform: translateY(-5px); /* Efecto hover para las cajas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.comentario i {
+    font-size: 40px; /* Tamaño del icono */
+    color: #333;
+    margin-bottom: 10px; /* Espacio entre el icono y el texto */
+}
+
+.comentario .texto {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Contenedor principal para el contenido */
+#CONTENIDO_INICIO {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenedor inferior que contendrá las divisiones */
+#CONTENIDO_INF {
+    display: flex;                     /* Utilizamos Flexbox para organizar horizontalmente */
+    justify-content: space-around;      /* Espaciamos las divisiones de manera uniforme */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    border-radius: 8px;
+}
+
+/* Cada división de contenido */
+.DIVISIONES_CONTENIDO {
+    background-color: #070707;             /* Fondo blanco para cada división */
+    padding: 15px;
+    border-radius: 8px;
+    width: 30%;                         /* Ajusta el tamaño de cada división al 30% del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    box-sizing: border-box;
+    text-align: center;                 /* Centra el texto en cada división */
+}
+
+/* Asegura la responsividad */
+@media (max-width: 768px) {
+    #CONTENIDO_INF {
+        flex-direction: column;         /* En pantallas pequeñas, organiza las divisiones en columna */
+        align-items: center;
+    }
+    .DIVISIONES_CONTENIDO {
+        width: 90%;                     /* Asegura que las divisiones ocupen la mayoría del ancho en pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+}
+
+#funciones {
+    background-color: rgba(169, 169, 169, 0.8); /* gris con opacidad 80% */
+    width: 95%;
+    padding: 8px ;
+    height: 170px;
+    text-align: center;
+    margin: 0 auto; /* Esto centra el contenedor */
+}
+
+#funciones .columna {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 250px;
+    border-radius: 20px; /* Redondea las esquinas */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Establece el contenedor de las columnas como un diseño vertical */
+.columnas {
+    display: block; /* Cambia de flex a bloque para una disposición vertical */
+}
+
+/* Asegura que haya un espacio entre el mapa y las redes sociales */
+.columnas .columna {
+    margin-bottom: 20px; /* Añade espacio entre los elementos */
+}
+
+/* Ajuste adicional para el iframe del mapa */
+.columnas .columna:nth-child(3) iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+.social-icons a {
+    margin-right: 100px; /* Añade espacio a la derecha de cada ícono */
+}
+
+/* Ajustamos el margen y el relleno de las secciones */
+section {
+    margin: 0; /* Elimina el margen exterior de las secciones */
+    padding: 20px 0; /* Puedes ajustar el relleno de arriba y abajo */
+}
+
+/* Si necesitas modificar márgenes de los títulos dentro de las secciones */
+section h2 {
+    margin-top: 0;  /* Elimina margen superior */
+    margin-bottom: 10px; /* Ajusta el margen inferior para el título */
+}
+
+/* Puedes modificar también las imágenes dentro de las secciones */
+section img {
+    margin-bottom: 10px;  /* Ajusta el margen inferior de las imágenes */
+}
+
+/* Restablecer márgenes y rellenos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto ayuda a controlar mejor los tamaños y márgenes */
+}
+
+/* Estilos de los inputs y el textarea */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #807c7c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+}
